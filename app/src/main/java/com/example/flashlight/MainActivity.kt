@@ -16,14 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         val clBackground = findViewById<ConstraintLayout>(R.id.clBackground)
 
-        clBackground.setBackgroundColor(Color.BLACK)
+        clBackground.setBackgroundColor(Color.WHITE)
 
         clBackground.setOnClickListener {
-            if (isOn) {
-                clBackground.setBackgroundColor(Color.BLACK)
-            } else {
-                clBackground.setBackgroundColor(Color.WHITE)
-            }
+            clBackground.setBackgroundColor(if (isOn) Color.WHITE else Color.BLACK)
             isOn = !isOn
         }
 
